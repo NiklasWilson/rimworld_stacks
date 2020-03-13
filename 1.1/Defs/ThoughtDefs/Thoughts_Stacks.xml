@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThoughtDef>
+		<defName>CorticalStackThought</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>CorticalStack</hediff>
+		<nullifyingTraits>
+			<li>BodyPurist</li>
+		</nullifyingTraits>
+		<stages>
+			<li>
+				<label>Cortical Stack</label>
+				<description>I am invincible as long as nobody shoots my stack!</description>
+				<baseMoodEffect>2</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>CorticalStackThoughtBodyPurist</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>CorticalStack</hediff>
+		<validWhileDespawned>true</validWhileDespawned>
+		<requiredTraits>
+			<li>BodyPurist</li>
+		</requiredTraits>
+		<stages>
+			<li>
+				<label>Cortical Stack</label>
+				<description>This is wrong! My mind should not be imprisoned by a computer chip!</description>
+				<baseMoodEffect>-20</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+</Defs>

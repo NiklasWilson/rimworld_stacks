@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+
+	<HediffDef Name="addedPartCorticalStack" Abstract="True">
+		<hediffClass>Hediff_AddedPart</hediffClass>
+		<isBad>false</isBad>
+		<defaultLabelColor>(0, 0.5, 0.8)</defaultLabelColor>
+	</HediffDef>
+
+	<!-- New EPOE body parts -->
+	<!-- Cortical Stacks -->
+
+	<ThingDef Name="BodyPartCorticalStackBase" ParentName="BodyPartBionicBase" Abstract="True">
+		<recipeMaker>
+			<researchPrerequisite>CorticalStacks</researchPrerequisite>
+		</recipeMaker>
+	</ThingDef>
+
+	<!-- Cortical Stack -->
+
+	<HediffDef ParentName="addedPartCorticalStack">
+		<defName>CorticalStack</defName>
+		<label>Cortical Stack</label>
+		<labelNoun>A Cortical Stack</labelNoun>
+		<description>An installed cortical stack.</description>
+		<descriptionHyperlinks><ThingDef>CorticalStack</ThingDef></descriptionHyperlinks>
+		<spawnThingOnRemoved>CorticalStack</spawnThingOnRemoved>
+		<hediffClass>Hediff_Implant</hediffClass>
+		<stages>
+			<li>
+				<painFactor>0.99</painFactor>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<ThingDef ParentName="BodyPartCorticalStackBase">
+		<defName>CorticalStack</defName>
+		<label>Cortical Stack</label>
+		<description>Cortical Stacks serve as a receptacle for the human consciousness or Digital Human Freight (D.H.F.)</description>
+		<descriptionHyperlinks><RecipeDef>InstallCorticalStack</RecipeDef></descriptionHyperlinks>
+		<costList>
+			<Plasteel>35</Plasteel>
+		</costList>
+		<statBases>
+			<Mass>0.3</Mass>
+		</statBases>
+	</ThingDef>
+
+	<RecipeDef ParentName="SurgeryInstallImplantBase">
+		<defName>InstallCorticalStack</defName>
+		<label>install cortical stack</label>
+		<description>Installs a cortical stack.</description>
+		<descriptionHyperlinks><ThingDef>CorticalStack</ThingDef></descriptionHyperlinks>
+		<jobString>Installing a cortical stack.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>CorticalStack</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>CorticalStack</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Neck</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>CorticalStack</addsHediff>
+	</RecipeDef>
+</Defs>

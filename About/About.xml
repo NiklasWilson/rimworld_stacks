@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Stacks</name>
+	<author>Niklas Wilson</author>
+	<url>https://wwww.niklaswilson.net</url>
+	<supportedVersions>
+		<li>1.1</li>
+	</supportedVersions>
+	<packageId>nw.stacks</packageId>
+	<description>Adds Cortical Stacks and the concept of D.H.F storage</description>
+</ModMetaData>
